@@ -27,49 +27,7 @@ struct Character: Decodable {
 }
 
 extension Character {
-    func getCharacter(link: String) -> Character? {
-        var trueCharacter: Character?
-        let url = URL(string: link)!
-            
-        URLSession.shared.dataTask(with: url) { data, _, error in
-                guard let data = data else {
-                    print(error?.localizedDescription ?? "No error description")
-                    return
-                }
-                
-                do {
-                    let character = try JSONDecoder().decode([Character].self, from: data)
-                        guard let singleCharacter: Character = character.first else {return }
-                       trueCharacter = singleCharacter
-  //                      guard let characterUrl = URL(string: singleCharacter.photoUrl ?? "" ) else { return }
- //                       guard let photoImage = try? Data(contentsOf: characterUrl) else { return }
-//                        DispatchQueue.main.async {
-//                            self.firstLabel.text = """
-//                            name: \(String(singleCharacter.name ?? ""))
-//                            gender: \(String(singleCharacter.gender ?? ""))
-//                            hair: \(String(singleCharacter.hair ?? ""))
-//                            love: \(String(singleCharacter.love ?? "unknown"))
-//                            """
-//                            self.secondLabel.text = """
-//                            allies: \(String(singleCharacter.allies?.description ?? ""))
-//                            enemies: \(String(singleCharacter.enemies?.description ?? ""))
-//                            """
-//
-//                            self.thirdLabel.text = """
-//                            weapon: \(String(singleCharacter.weapon ?? ""))
-//                            profession: \(String(singleCharacter.profession ?? ""))
-//                            position: \(String(singleCharacter.position ?? ""))
-//                            affiliation: \(String(singleCharacter.affiliation ?? ""))
-//                            """
-//                            self.photoView.image = UIImage(data: photoImage)
- //                       }
-                } catch let error {
-                    print(error.localizedDescription)
-                }
-
-            }.resume()
-        return trueCharacter
+    static func getCharacter() -> Character? {
+        NetworkManager.shared.getCharacter(from: Links.random.rawValue).first
     }
-
-    
 }

@@ -11,7 +11,7 @@ let link = "https://last-airbender-api.herokuapp.com/api/v1/characters/random"
 
 class MainViewController: UIViewController {
     
- //   private var character = NetworkManager.shared.getCharacter(link: link)
+    var character = Character.getCharacter()
     
     @IBOutlet var photoView: UIImageView!
     
@@ -21,63 +21,47 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        character = Character.getCharacter()
     }
     
     
     
     @IBAction func getRandomCharacter() {
-        
         fetchCharacter()
+        character = Character.getCharacter()
     }
     
 }
 
 extension MainViewController {
     private func fetchCharacter() {
-    
-        guard let url = URL(string: link) else { return }
-            
-            URLSession.shared.dataTask(with: url) { data, _, error in
-                guard let data = data else {
-                    print(error?.localizedDescription ?? "No error description")
-                    return
-                }
-                
-                do {
-                    let character = try JSONDecoder().decode([Character].self, from: data)
-                    guard let singleCharacter: Character = character.first else {return }
-                    guard let characterUrl = URL(string: singleCharacter.photoUrl ?? "" ) else { return }
-                    guard let photoImage = try? Data(contentsOf: characterUrl) else { return }
-                    DispatchQueue.main.async {
-                        self.firstLabel.text =
-                                """
-                                name: \(String(singleCharacter.name ?? ""))
-                                gender: \(String(singleCharacter.gender ?? ""))
-                                hair: \(String(singleCharacter.hair ?? ""))
-                                love: \(String(singleCharacter.love ?? "unknown"))
-                                """
-                        self.secondLabel.text =
-                                """
-                                allies: \(String(singleCharacter.allies?.description ?? ""))
-                                enemies: \(String(singleCharacter.enemies?.description ?? ""))
-                                """
-                        
-                        self.thirdLabel.text =
-                                """
-                                weapon: \(String(singleCharacter.weapon ?? ""))
-                                profession: \(String(singleCharacter.profession ?? ""))
-                                position: \(String(singleCharacter.position ?? ""))
-                                affiliation: \(String(singleCharacter.affiliation ?? ""))
-                                """
-                        self.photoView.image = UIImage(data: photoImage)
-                    }
-                } catch let error {
-                    print(error.localizedDescription)
-                }
-                
-            }.resume()
-  
+        guard let char = character else {return}
+        guard let characterUrl = URL(string: char.photoUrl ?? "" ) else { return }
+        guard let photoImage = try? Data(contentsOf: characterUrl) else { return }
         
+        DispatchQueue.main.async {
+            self.firstLabel.text =
+                                """
+                                name: \(String(char.name ?? ""))
+                                gender: \(String(char.gender ?? ""))
+                                hair: \(String(char.hair ?? ""))
+                                love: \(String(char.love ?? "unknown"))
+                                """
+            self.secondLabel.text =
+                                """
+                                allies: \(String(char.allies?.description ?? ""))
+                                enemies: \(String(char.enemies?.description ?? ""))
+                                """
+            
+            self.thirdLabel.text =
+                                """
+                                weapon: \(String(char.weapon ?? ""))
+                                profession: \(String(char.profession ?? ""))
+                                position: \(String(char.position ?? ""))
+                                affiliation: \(String(char.affiliation ?? ""))
+                                """
+            self.photoView.image = UIImage(data: photoImage)
+        }
         
     }
 }
