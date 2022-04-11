@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		E8B683AE28043D3700034D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683AD28043D3700034D75 /* AppDelegate.swift */; };
 		E8B683B028043D3700034D75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683AF28043D3700034D75 /* SceneDelegate.swift */; };
-		E8B683B228043D3700034D75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683B128043D3700034D75 /* ViewController.swift */; };
+		E8B683B228043D3700034D75 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683B128043D3700034D75 /* MainViewController.swift */; };
 		E8B683B528043D3700034D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B683B328043D3700034D75 /* Main.storyboard */; };
 		E8B683B728043D3800034D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B683B628043D3800034D75 /* Assets.xcassets */; };
 		E8B683BA28043D3800034D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B683B828043D3800034D75 /* LaunchScreen.storyboard */; };
+		E8B683C728043F5000034D75 /* RandomCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683C628043F5000034D75 /* RandomCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E8B683AA28043D3700034D75 /* NetworkingWithLastAirbenderAPIOnUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingWithLastAirbenderAPIOnUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B683AD28043D3700034D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B683AF28043D3700034D75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E8B683B128043D3700034D75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E8B683B128043D3700034D75 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E8B683B428043D3700034D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8B683B628043D3800034D75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8B683B928043D3800034D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8B683BB28043D3800034D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8B683C628043F5000034D75 /* RandomCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		E8B683AC28043D3700034D75 /* NetworkingWithLastAirbenderAPIOnUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				E8B683AD28043D3700034D75 /* AppDelegate.swift */,
-				E8B683AF28043D3700034D75 /* SceneDelegate.swift */,
-				E8B683B128043D3700034D75 /* ViewController.swift */,
-				E8B683B328043D3700034D75 /* Main.storyboard */,
-				E8B683B628043D3800034D75 /* Assets.xcassets */,
-				E8B683B828043D3800034D75 /* LaunchScreen.storyboard */,
-				E8B683BB28043D3800034D75 /* Info.plist */,
+				E8B683C228043DAE00034D75 /* ViewControllers */,
+				E8B683C328043E2800034D75 /* Models */,
+				E8B683C128043D4D00034D75 /* Storyboards */,
+				E8B683C428043E4A00034D75 /* App */,
+				E8B683C528043E7C00034D75 /* Resources */,
 			);
 			path = NetworkingWithLastAirbenderAPIOnUIKit;
+			sourceTree = "<group>";
+		};
+		E8B683C128043D4D00034D75 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E8B683B828043D3800034D75 /* LaunchScreen.storyboard */,
+				E8B683B328043D3700034D75 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E8B683C228043DAE00034D75 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E8B683B128043D3700034D75 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E8B683C328043E2800034D75 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8B683C628043F5000034D75 /* RandomCharacter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E8B683C428043E4A00034D75 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E8B683AD28043D3700034D75 /* AppDelegate.swift */,
+				E8B683AF28043D3700034D75 /* SceneDelegate.swift */,
+				E8B683BB28043D3800034D75 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E8B683C528043E7C00034D75 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E8B683B628043D3800034D75 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +181,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8B683B228043D3700034D75 /* ViewController.swift in Sources */,
+				E8B683B228043D3700034D75 /* MainViewController.swift in Sources */,
 				E8B683AE28043D3700034D75 /* AppDelegate.swift in Sources */,
+				E8B683C728043F5000034D75 /* RandomCharacter.swift in Sources */,
 				E8B683B028043D3700034D75 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Q7FR5CHKB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NetworkingWithLastAirbenderAPIOnUIKit/Info.plist;
+				INFOPLIST_FILE = NetworkingWithLastAirbenderAPIOnUIKit/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +363,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Q7FR5CHKB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NetworkingWithLastAirbenderAPIOnUIKit/Info.plist;
+				INFOPLIST_FILE = NetworkingWithLastAirbenderAPIOnUIKit/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

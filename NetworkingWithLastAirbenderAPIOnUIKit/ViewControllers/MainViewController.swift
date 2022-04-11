@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
+    
+    let apiURL = "https://last-airbender-api.herokuapp.com/api/v1/characters/random"
 
     override func viewDidLoad() {
         super.viewDidLoad()
