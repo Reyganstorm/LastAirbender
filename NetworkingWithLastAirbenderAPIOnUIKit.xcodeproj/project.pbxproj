@@ -14,6 +14,8 @@
 		E8B683B728043D3800034D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B683B628043D3800034D75 /* Assets.xcassets */; };
 		E8B683BA28043D3800034D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B683B828043D3800034D75 /* LaunchScreen.storyboard */; };
 		E8B683C728043F5000034D75 /* RandomCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683C628043F5000034D75 /* RandomCharacter.swift */; };
+		E8B683C92804599C00034D75 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683C82804599C00034D75 /* LaunchViewController.swift */; };
+		E8B683CC2804621500034D75 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683CB2804621500034D75 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E8B683B928043D3800034D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8B683BB28043D3800034D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8B683C628043F5000034D75 /* RandomCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCharacter.swift; sourceTree = "<group>"; };
+		E8B683C82804599C00034D75 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchViewController.swift; path = NetworkingWithLastAirbenderAPIOnUIKit/ViewControllers/LaunchViewController.swift; sourceTree = SOURCE_ROOT; };
+		E8B683CB2804621500034D75 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				E8B683C128043D4D00034D75 /* Storyboards */,
 				E8B683C428043E4A00034D75 /* App */,
 				E8B683C528043E7C00034D75 /* Resources */,
+				E8B683CA280461EF00034D75 /* Services */,
 			);
 			path = NetworkingWithLastAirbenderAPIOnUIKit;
 			sourceTree = "<group>";
@@ -79,6 +84,7 @@
 		E8B683C228043DAE00034D75 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8B683C82804599C00034D75 /* LaunchViewController.swift */,
 				E8B683B128043D3700034D75 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
@@ -95,8 +101,8 @@
 		E8B683C428043E4A00034D75 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				E8B683AD28043D3700034D75 /* AppDelegate.swift */,
 				E8B683AF28043D3700034D75 /* SceneDelegate.swift */,
+				E8B683AD28043D3700034D75 /* AppDelegate.swift */,
 				E8B683BB28043D3800034D75 /* Info.plist */,
 			);
 			path = App;
@@ -108,6 +114,14 @@
 				E8B683B628043D3800034D75 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E8B683CA280461EF00034D75 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E8B683CB2804621500034D75 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +195,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B683CC2804621500034D75 /* NetworkManager.swift in Sources */,
+				E8B683C92804599C00034D75 /* LaunchViewController.swift in Sources */,
 				E8B683B228043D3700034D75 /* MainViewController.swift in Sources */,
 				E8B683AE28043D3700034D75 /* AppDelegate.swift in Sources */,
 				E8B683C728043F5000034D75 /* RandomCharacter.swift in Sources */,
