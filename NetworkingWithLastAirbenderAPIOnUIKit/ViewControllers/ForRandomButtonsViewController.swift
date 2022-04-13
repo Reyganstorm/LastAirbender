@@ -9,31 +9,76 @@ import UIKit
 
 let link = "https://last-airbender-api.herokuapp.com/api/v1/characters/random"
 
-class MainViewController: UIViewController {
-    
-    var character = Character.getCharacter()
-    
-    @IBOutlet var photoView: UIImageView!
-    
-    @IBOutlet var firstLabel: UILabel!
-    @IBOutlet var secondLabel: UILabel!
-    @IBOutlet var thirdLabel: UILabel!
+class ForRandomButtonsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        character = Character.getCharacter()
     }
     
     
     
     @IBAction func getRandomCharacter() {
-        fetchCharacter()
-        character = Character.getCharacter()
+       
+        
     }
     
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+     }
 }
 
-extension MainViewController {
+
+extension ForRandomButtonsViewController {
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let randomCharVC = segue.destination as? RandomCharacterViewController
+        else {return}
+    NetworkManager.shared.getCharacter(from: Links.random.rawValue) { result in
+        switch result {
+        case .success(let character):
+            self.successAlert()
+            randomCharVC.character = character
+        case .failure(let error):
+            print(error)
+            self.failedAlert()
+        }
+    }
+    }
+    
+    
+    // MARK: - Alert Controller
+    private func successAlert() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(
+                title: "Success",
+                message: "You can see the results in the Debug aria",
+                preferredStyle: .alert
+            )
+
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+    }
+    
+    }
+    
+    private func failedAlert() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(
+                title: "Failed",
+                message: "You can see error in the Debug aria",
+                preferredStyle: .alert
+            )
+            
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+       //     present(alert, animated: true)
+        }
+    }
+}
+
+/*
+extension ForRandomButtonsViewController {
     private func fetchCharacter() {
         guard let char = character else {return}
         guard let characterUrl = URL(string: char.photoUrl ?? "" ) else { return }
@@ -65,3 +110,4 @@ extension MainViewController {
         
     }
 }
+ */

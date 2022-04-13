@@ -8,7 +8,6 @@
 import Foundation
 
 struct Character: Decodable {
- //   let id: String?
     
     let allies: [String]?
     let enemies: [String]?
@@ -24,10 +23,4 @@ struct Character: Decodable {
     let profession: String?
     let position: String?
     let affiliation: String?
-}
-
-extension Character {
-    static func getCharacter() -> Character? {
-        NetworkManager.shared.getCharacter(from: Links.random.rawValue).first
-    }
 }

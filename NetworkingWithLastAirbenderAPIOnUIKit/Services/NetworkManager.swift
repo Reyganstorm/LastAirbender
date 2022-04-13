@@ -7,37 +7,58 @@
 
 import Foundation
 
+enum Links: String {
+    case random = "https://last-airbender-api.herokuapp.com/api/v1/characters/random"
+    case empty = ""
+}
+
 enum NetworkError: Error {
     case invalidURL
     case noData
     case decodingError
 }
 
-
 class NetworkManager {
     static let shared = NetworkManager()
     
-    var character: [Character] = []
+    func getCharacter(from stringUrl: String?,with completion: @escaping(Result<[Character], NetworkError>) -> Void) {
+        guard let url = URL(string: stringUrl ?? "") else { return completion(.failure(.invalidURL)) }
+        
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                completion(.failure(.noData))
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
+            
+            do {
+                let characterData = try JSONDecoder().decode([Character].self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(characterData))
+                }
+            } catch {
+                completion(.failure(.decodingError))
+            }
+        }.resume()
+    }
     
-    func getCharacter(from stringUrl: String, with completion: (Result<Character, NetworkError>)) -> Void {
-        
-        guard let url = URL(string: stringUrl) else { completion(.failure(.invalis)) }
-        
-        
-            URLSession.shared.dataTask(with: url) { data, _, error in
-                guard let data = data else {
-                    print(error?.localizedDescription ?? "No error description")
-                    return
-                }
-                do {
-                    self.character = try JSONDecoder().decode([Character].self, from: data)
-                } catch let error {
-                    print(error.localizedDescription)
-                }
-                
-            }.resume()
+    func fetchImage(from url: String?, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+        guard let url = URL(string: url ?? "") else {
+            completion(.failure(.invalidURL))
+            return
         }
+        do {
+            guard let imageData = try? Data(contentsOf: url) else {
+                completion(.failure(.noData))
+                return
+            }
+            DispatchQueue.main.async {
+                completion(.success(imageData))
+            }
+        
 
+        }
+    }
     
     init() {}
 }
