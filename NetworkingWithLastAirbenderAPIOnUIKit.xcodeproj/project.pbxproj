@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E85724CD2806DBCA00619E8A /* RandomCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724CC2806DBCA00619E8A /* RandomCharacterViewController.swift */; };
+		E85724CF28070F0100619E8A /* AvatarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724CE28070F0100619E8A /* AvatarsListViewController.swift */; };
+		E85724D1280711EA00619E8A /* AvatarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724D0280711EA00619E8A /* AvatarViewCell.swift */; };
 		E8B683AE28043D3700034D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683AD28043D3700034D75 /* AppDelegate.swift */; };
 		E8B683B028043D3700034D75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683AF28043D3700034D75 /* SceneDelegate.swift */; };
 		E8B683B228043D3700034D75 /* ForRandomButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683B128043D3700034D75 /* ForRandomButtonsViewController.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		E85724CC2806DBCA00619E8A /* RandomCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCharacterViewController.swift; sourceTree = "<group>"; };
+		E85724CE28070F0100619E8A /* AvatarsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AvatarsListViewController.swift; path = NetworkingWithLastAirbenderAPIOnUIKit/ViewControllers/AvatarsListViewController.swift; sourceTree = SOURCE_ROOT; };
+		E85724D0280711EA00619E8A /* AvatarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewCell.swift; sourceTree = "<group>"; };
 		E8B683AA28043D3700034D75 /* NetworkingWithLastAirbenderAPIOnUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingWithLastAirbenderAPIOnUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B683AD28043D3700034D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B683AF28043D3700034D75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,10 +68,10 @@
 			children = (
 				E8B683C228043DAE00034D75 /* ViewControllers */,
 				E8B683C328043E2800034D75 /* Models */,
+				E8B683CA280461EF00034D75 /* Services */,
 				E8B683C128043D4D00034D75 /* Storyboards */,
 				E8B683C428043E4A00034D75 /* App */,
 				E8B683C528043E7C00034D75 /* Resources */,
-				E8B683CA280461EF00034D75 /* Services */,
 			);
 			path = NetworkingWithLastAirbenderAPIOnUIKit;
 			sourceTree = "<group>";
@@ -86,6 +90,8 @@
 			children = (
 				E85724CC2806DBCA00619E8A /* RandomCharacterViewController.swift */,
 				E8B683B128043D3700034D75 /* ForRandomButtonsViewController.swift */,
+				E85724CE28070F0100619E8A /* AvatarsListViewController.swift */,
+				E85724D0280711EA00619E8A /* AvatarViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,9 +202,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8B683CC2804621500034D75 /* NetworkManager.swift in Sources */,
+				E85724D1280711EA00619E8A /* AvatarViewCell.swift in Sources */,
 				E8B683B228043D3700034D75 /* ForRandomButtonsViewController.swift in Sources */,
 				E85724CD2806DBCA00619E8A /* RandomCharacterViewController.swift in Sources */,
 				E8B683AE28043D3700034D75 /* AppDelegate.swift in Sources */,
+				E85724CF28070F0100619E8A /* AvatarsListViewController.swift in Sources */,
 				E8B683C728043F5000034D75 /* RandomCharacter.swift in Sources */,
 				E8B683B028043D3700034D75 /* SceneDelegate.swift in Sources */,
 			);

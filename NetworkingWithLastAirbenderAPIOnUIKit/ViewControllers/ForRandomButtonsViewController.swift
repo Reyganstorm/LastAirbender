@@ -12,9 +12,9 @@ class ForRandomButtonsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fetchCharacter()
     }
+    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -23,7 +23,8 @@ class ForRandomButtonsViewController: UIViewController {
         randomCharVC.character = character
     }
     
-    @IBAction func getRandomCharacter() {}
+    @IBAction func getRandomCharacter() {
+    }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         fetchCharacter()

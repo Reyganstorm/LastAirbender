@@ -9,7 +9,7 @@ import Foundation
 
 enum Links: String {
     case random = "https://last-airbender-api.herokuapp.com/api/v1/characters/random"
-    case empty = ""
+    case allAvatars = "https://last-airbender-api.herokuapp.com/api/v1/characters/avatar"
 }
 
 enum NetworkError: Error {
