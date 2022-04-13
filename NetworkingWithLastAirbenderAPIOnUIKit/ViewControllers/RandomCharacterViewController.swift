@@ -21,9 +21,7 @@ class RandomCharacterViewController: UIViewController {
    
 }
 
-
 extension RandomCharacterViewController {
-    
      func fetchImage(char: [Character]) {
          let character = char[0]
          NetworkManager.shared.fetchImage(from: character.photoUrl) { result in
