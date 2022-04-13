@@ -18,10 +18,17 @@ class AvatarViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configure(with avatar: Avatar) {
+        avatarNameLabel.text = avatar.name
+        
+        NetworkManager.shared.fetchImage(from: avatar.photoURL) { result in
+            switch result {
+            case .success(let imageAvatar):
+                self.avatarView.image = UIImage(data: imageAvatar)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 }

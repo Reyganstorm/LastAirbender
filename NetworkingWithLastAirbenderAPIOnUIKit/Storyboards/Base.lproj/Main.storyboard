@@ -127,7 +127,7 @@
         <!--Legent Of Avatar-->
         <scene sceneID="5Ta-G4-Fzi">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ChD-pf-2de" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ChD-pf-2de" customClass="TabBarViewController" customModule="NetworkingWithLastAirbenderAPIOnUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Legent Of Avatar" id="ajF-Yg-gh3"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wCZ-V9-E1Z">

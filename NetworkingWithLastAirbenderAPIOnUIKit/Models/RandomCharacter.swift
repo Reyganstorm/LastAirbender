@@ -24,3 +24,10 @@ struct Character: Decodable {
     let position: String?
     let affiliation: String?
 }
+
+struct Avatar: Codable {
+    let id: String?
+    let photoURL: String?
+    let name: String?
+    let first: String?
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8210CA92807164300851ECE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8210CA82807164300851ECE /* TabBarViewController.swift */; };
 		E85724CD2806DBCA00619E8A /* RandomCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724CC2806DBCA00619E8A /* RandomCharacterViewController.swift */; };
 		E85724CF28070F0100619E8A /* AvatarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724CE28070F0100619E8A /* AvatarsListViewController.swift */; };
 		E85724D1280711EA00619E8A /* AvatarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724D0280711EA00619E8A /* AvatarViewCell.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E8210CA82807164300851ECE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E85724CC2806DBCA00619E8A /* RandomCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCharacterViewController.swift; sourceTree = "<group>"; };
 		E85724CE28070F0100619E8A /* AvatarsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AvatarsListViewController.swift; path = NetworkingWithLastAirbenderAPIOnUIKit/ViewControllers/AvatarsListViewController.swift; sourceTree = SOURCE_ROOT; };
 		E85724D0280711EA00619E8A /* AvatarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewCell.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				E8B683B128043D3700034D75 /* ForRandomButtonsViewController.swift */,
 				E85724CE28070F0100619E8A /* AvatarsListViewController.swift */,
 				E85724D0280711EA00619E8A /* AvatarViewCell.swift */,
+				E8210CA82807164300851ECE /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				E85724D1280711EA00619E8A /* AvatarViewCell.swift in Sources */,
 				E8B683B228043D3700034D75 /* ForRandomButtonsViewController.swift in Sources */,
 				E85724CD2806DBCA00619E8A /* RandomCharacterViewController.swift in Sources */,
+				E8210CA92807164300851ECE /* TabBarViewController.swift in Sources */,
 				E8B683AE28043D3700034D75 /* AppDelegate.swift in Sources */,
 				E85724CF28070F0100619E8A /* AvatarsListViewController.swift in Sources */,
 				E8B683C728043F5000034D75 /* RandomCharacter.swift in Sources */,
