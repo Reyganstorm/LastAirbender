@@ -137,88 +137,71 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="iMR-hi-LR9"/>
-                        <segue destination="kJc-uU-fMl" kind="relationship" relationship="viewControllers" id="Wyk-fT-Fev"/>
+                        <segue destination="vlQ-aS-N7U" kind="relationship" relationship="viewControllers" id="rme-zl-Squ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qa8-We-BMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1031.25" y="97.5"/>
         </scene>
-        <!--Avatars-->
-        <scene sceneID="Kox-kK-OMP">
+        <!--avatars-->
+        <scene sceneID="DxB-lG-CoS">
             <objects>
-                <viewController id="kJc-uU-fMl" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nyE-cJ-WAL">
+                <tableViewController id="vlQ-aS-N7U" customClass="AvatarsListViewController" customModule="NetworkingWithLastAirbenderAPIOnUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="S0C-jw-ddf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uHE-LY-msP">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="avatars" rowHeight="99" id="K7L-bT-r21" customClass="AvatarViewCell" customModule="NetworkingWithLastAirbenderAPIOnUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="99"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K7L-bT-r21" id="8Q8-Rk-h41">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9R3-x9-Xom">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="99"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="KQD-1s-ARA"/>
-                                                        <constraint firstAttribute="height" constant="100" id="jsK-n2-Dmh"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nGT-cK-AXl">
-                                                    <rect key="frame" x="100" y="11" width="259" height="77"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTD-Ko-cI4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="41.5" height="38.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9E-73-2SO">
-                                                            <rect key="frame" x="0.0" y="38.5" width="41.5" height="38.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="9R3-x9-Xom" secondAttribute="bottom" id="0xC-4G-s5Q"/>
-                                                <constraint firstItem="nGT-cK-AXl" firstAttribute="leading" secondItem="9R3-x9-Xom" secondAttribute="trailing" id="2Nq-nN-vk4"/>
-                                                <constraint firstItem="9R3-x9-Xom" firstAttribute="top" secondItem="8Q8-Rk-h41" secondAttribute="top" id="Pjw-xA-qej"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="nGT-cK-AXl" secondAttribute="trailing" id="Tlj-UA-E3r"/>
-                                                <constraint firstItem="9R3-x9-Xom" firstAttribute="leading" secondItem="8Q8-Rk-h41" secondAttribute="leading" id="dUG-M6-vx2"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="nGT-cK-AXl" secondAttribute="bottom" id="iWy-b0-mdw"/>
-                                                <constraint firstItem="nGT-cK-AXl" firstAttribute="top" secondItem="8Q8-Rk-h41" secondAttribute="topMargin" id="rQ6-rP-VBc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="avatarNameLabel" destination="y9E-73-2SO" id="5E1-ET-WyT"/>
-                                            <outlet property="avatarView" destination="9R3-x9-Xom" id="ptM-qE-IBV"/>
-                                            <outlet property="nationLabel" destination="wTD-Ko-cI4" id="Dfy-nE-rFZ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="puM-Jx-hsg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="puM-Jx-hsg" firstAttribute="bottom" secondItem="uHE-LY-msP" secondAttribute="bottom" id="0wL-hA-QTZ"/>
-                            <constraint firstItem="uHE-LY-msP" firstAttribute="leading" secondItem="puM-Jx-hsg" secondAttribute="leading" id="Jwg-KK-I8t"/>
-                            <constraint firstItem="uHE-LY-msP" firstAttribute="top" secondItem="puM-Jx-hsg" secondAttribute="top" id="cHf-48-yr2"/>
-                            <constraint firstItem="puM-Jx-hsg" firstAttribute="trailing" secondItem="uHE-LY-msP" secondAttribute="trailing" id="wle-Ji-ua0"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Avatars" image="person.3.fill" catalog="system" id="1CN-nb-Ore"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GSr-pv-tNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="avatars" rowHeight="113" id="Tgp-lV-Jc4" customClass="AvatarViewCell" customModule="NetworkingWithLastAirbenderAPIOnUIKit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="113"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tgp-lV-Jc4" id="vA2-TR-unC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qYl-wr-d1K">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="113"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="miD-dW-u47"/>
+                                                <constraint firstAttribute="width" constant="100" id="wxl-GG-ysL"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="100"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgm-fy-Mrw">
+                                            <rect key="frame" x="130" y="46.5" width="209" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qYl-wr-d1K" firstAttribute="top" secondItem="vA2-TR-unC" secondAttribute="top" id="0Lf-v4-Nhg"/>
+                                        <constraint firstAttribute="bottom" secondItem="qYl-wr-d1K" secondAttribute="bottom" id="0sb-WF-18H"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Tgm-fy-Mrw" secondAttribute="trailing" constant="20" id="AVa-9A-1lO"/>
+                                        <constraint firstItem="Tgm-fy-Mrw" firstAttribute="centerY" secondItem="vA2-TR-unC" secondAttribute="centerY" id="AiR-3Q-Oef"/>
+                                        <constraint firstItem="qYl-wr-d1K" firstAttribute="leading" secondItem="vA2-TR-unC" secondAttribute="leading" id="Gfm-nQ-1v0"/>
+                                        <constraint firstItem="Tgm-fy-Mrw" firstAttribute="leading" secondItem="qYl-wr-d1K" secondAttribute="trailing" constant="30" id="gTV-Hn-yBN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarNameLabel" destination="Tgm-fy-Mrw" id="RoX-q0-cxr"/>
+                                    <outlet property="avatarView" destination="qYl-wr-d1K" id="nDA-jl-6VL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vlQ-aS-N7U" id="ElF-EV-JGr"/>
+                            <outlet property="delegate" destination="vlQ-aS-N7U" id="k6t-Hf-gBI"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="avatars" image="person.3.fill" catalog="system" id="HKX-Pn-Tnm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPA-eM-YhV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2028" y="653.52323838080963"/>
         </scene>

@@ -11,17 +11,16 @@ class AvatarViewCell: UITableViewCell {
 
     @IBOutlet var avatarView: UIImageView!
     @IBOutlet var avatarNameLabel: UILabel!
-    @IBOutlet var nationLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func configure(with avatar: Avatar) {
+    func configure(with avatar: Character) {
         avatarNameLabel.text = avatar.name
         
-        NetworkManager.shared.fetchImage(from: avatar.photoURL) { result in
+        NetworkManager.shared.fetchImage(from: avatar.photoUrl) { result in
             switch result {
             case .success(let imageAvatar):
                 self.avatarView.image = UIImage(data: imageAvatar)

@@ -44,7 +44,7 @@ class NetworkManager {
     }
     
     // MARK: - func fetchImage
-    func fetchImage(from url: String?, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+    func fetchImage(from url: String?, with completion: @escaping(Result<Data, NetworkError>) -> Void) {
         guard let url = URL(string: url ?? "") else {
             completion(.failure(.invalidURL))
             return

@@ -9,7 +9,7 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
-    var avatars: [Avatar] = []
+    var avatars: [Character] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +21,18 @@ class TabBarViewController: UITabBarController {
     
     private func loadViewController() {
         guard let avatarVC = self.viewControllers?.last as? AvatarsListViewController else { return }
-        avatarVC.fetchAvatars()
+       
+        NetworkManager.shared.getCharacter(from: Links.allAvatars.rawValue) { result in
+            switch result {
+            case .success(let character):
+                DispatchQueue.main.async {
+                    self.avatars = character
+                    avatarVC.avatars = self.avatars
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+        }
     }
-    
-//    private func setupViewControllers() {
-//        fetchAvatars()
-//        let avatarsVC = viewControllers?.last as! AvatarsListViewController
-//        avatarsVC.avatars = avatars
-//    }
     
 
     /*
@@ -41,4 +45,5 @@ class TabBarViewController: UITabBarController {
     }
     */
 
+}
 }

@@ -25,9 +25,19 @@ struct Character: Decodable {
     let affiliation: String?
 }
 
-struct Avatar: Codable {
-    let id: String?
-    let photoURL: String?
+struct Avatar: Decodable {
+    let allies: [String]?
+    let enemies: [String]?
+    
+    let photoUrl: String?
     let name: String?
-    let first: String?
+    let gender: String?
+    let hair: String?
+    
+    let love: String?
+    
+    let weapon: String?
+    let profession: String?
+    let position: String?
+    let affiliation: String?
 }
