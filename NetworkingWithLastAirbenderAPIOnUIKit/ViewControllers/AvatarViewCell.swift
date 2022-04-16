@@ -18,12 +18,16 @@ class AvatarViewCell: UITableViewCell {
     }
 
     func configure(with avatar: Character) {
-        avatarNameLabel.text = avatar.name
-        
+        avatarNameLabel.text =
+        """
+        \(avatar.name ?? "")
+        \(avatar.gender ?? "")
+        """
         NetworkManager.shared.fetchImage(from: avatar.photoUrl) { result in
             switch result {
             case .success(let imageAvatar):
                 self.avatarView.image = UIImage(data: imageAvatar)
+                self.avatarView.layer.cornerRadius = self.avatarView.frame.width/2
             case .failure(let error):
                 print(error)
             }

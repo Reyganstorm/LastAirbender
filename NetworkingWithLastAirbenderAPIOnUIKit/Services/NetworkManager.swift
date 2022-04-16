@@ -60,30 +60,5 @@ class NetworkManager {
         }
     }
     
-    
-    // MARK: - func fetchAvatars
-    func fetchAvatars(from url: String?, with completion: @escaping(Result<[Avatar], NetworkError>)-> Void) {
-        guard let stringUrl = URL(string: url ?? "") else { return
-            completion(.failure(.invalidURL))
-        }
-        
-        URLSession.shared.dataTask(with: stringUrl) { data, _, error in
-            guard let data = data else {
-                completion(.failure(.noData))
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            do {
-                let avatars = try JSONDecoder().decode([Avatar].self, from: data)
-                DispatchQueue.main.async {
-                    completion(.success(avatars))
-                }
-            } catch {
-                completion(.failure(.decodingError))
-            }
-        }
-    }
-    
-    
     init() {}
 }
