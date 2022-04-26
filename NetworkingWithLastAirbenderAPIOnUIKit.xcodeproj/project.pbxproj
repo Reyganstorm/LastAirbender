@@ -19,6 +19,7 @@
 		E8B683BA28043D3800034D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B683B828043D3800034D75 /* LaunchScreen.storyboard */; };
 		E8B683C728043F5000034D75 /* RandomCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683C628043F5000034D75 /* RandomCharacter.swift */; };
 		E8B683CC2804621500034D75 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683CB2804621500034D75 /* NetworkManager.swift */; };
+		E8C49EE1281891DB0017AC94 /* CharacterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C49EE0281891DB0017AC94 /* CharacterImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E8B683BB28043D3800034D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8B683C628043F5000034D75 /* RandomCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCharacter.swift; sourceTree = "<group>"; };
 		E8B683CB2804621500034D75 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E8C49EE0281891DB0017AC94 /* CharacterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				E8B683C228043DAE00034D75 /* ViewControllers */,
 				E8B683C328043E2800034D75 /* Models */,
+				E8C49EE2281891E20017AC94 /* Views */,
 				E8B683CA280461EF00034D75 /* Services */,
 				E8B683C128043D4D00034D75 /* Storyboards */,
 				E8B683C428043E4A00034D75 /* App */,
@@ -131,6 +134,14 @@
 				E8B683CB2804621500034D75 /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E8C49EE2281891E20017AC94 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8C49EE0281891DB0017AC94 /* CharacterImage.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				E8B683CC2804621500034D75 /* NetworkManager.swift in Sources */,
 				E85724D1280711EA00619E8A /* AvatarViewCell.swift in Sources */,
 				E8B683B228043D3700034D75 /* ForRandomButtonsViewController.swift in Sources */,
+				E8C49EE1281891DB0017AC94 /* CharacterImage.swift in Sources */,
 				E85724CD2806DBCA00619E8A /* RandomCharacterViewController.swift in Sources */,
 				E8210CA92807164300851ECE /* TabBarViewController.swift in Sources */,
 				E8B683AE28043D3700034D75 /* AppDelegate.swift in Sources */,
