@@ -9,35 +9,26 @@ import UIKit
 
 class RandomCharacterViewController: UIViewController {
     
-    @IBOutlet var photoImage: UIImageView!
+    @IBOutlet var photoImage: CharacterImage!
     @IBOutlet var textLabel: UILabel!
     
     var character: [Character]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchImage(char: character)
-        description(char: character)
+        
+        description(char: character[0])
+        photoImage.fetchImage(from: character[0].photoUrl)
     }
    
 }
 
 extension RandomCharacterViewController {
-     func fetchImage(char: [Character]) {
-         let character = char[0]
-         NetworkManager.shared.fetchImage(from: character.photoUrl) { result in
-             switch result {
-             case .success(let imageData):
-                 
-                 self.photoImage.image = UIImage(data: imageData)
-             case .failure(let error):
-                 self.textLabel.text = error.localizedDescription
-             }
-         }
-     }
+
     
-    private func description(char: [Character]) {
-        let char = char[0]
+    private func description(char: Character?) {
+        guard let char = char else {return}
+        
         self.textLabel.text =
         """
         name: \(String(char.name ?? ""))

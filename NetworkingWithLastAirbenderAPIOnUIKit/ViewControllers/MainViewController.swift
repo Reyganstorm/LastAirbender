@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForRandomButtonsViewController: UIViewController {
+class MainViewController: UIViewController {
     private var character: [Character]?
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class ForRandomButtonsViewController: UIViewController {
 }
 
 
-extension ForRandomButtonsViewController {
+extension MainViewController {
     private func fetchCharacter() {
         NetworkManager.shared.getCharacter(from: Links.random.rawValue) { result in
             switch result {

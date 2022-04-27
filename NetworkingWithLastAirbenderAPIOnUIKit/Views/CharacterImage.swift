@@ -7,14 +7,18 @@
 
 import UIKit
 
-class CharacterImage: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class CharacterImage: UIImageView {
+    
+    func fetchImage(from url: String?) {
+        guard let url = URL(string: url ?? "") else {
+            image = UIImage(named: "anonim")
+            return}
+        
+        ImageManager.shared.fetchImage(from: url) { data, response in
+            self.image = UIImage(data: data)
+        }
     }
-    */
-
+    // Используем изображение из кеша если оно там есть
+    
+    // Вызываем картинку и сохраняем в кеш
 }
