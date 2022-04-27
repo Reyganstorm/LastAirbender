@@ -17,6 +17,7 @@ class CharacterImage: UIImageView {
         // Используем изображение из кеша если оно там есть
         if let cashedImage = getCache(from: url) {
             image = cashedImage
+            return
         }
         
         // Вызываем картинку и сохраняем в кеш
