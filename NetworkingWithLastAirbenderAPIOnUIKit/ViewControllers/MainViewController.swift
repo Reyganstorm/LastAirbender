@@ -8,7 +8,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    private var character: [Character]?
+    private var character: Character?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ extension MainViewController {
         NetworkManager.shared.getCharacter(from: Links.random.rawValue) { result in
             switch result {
             case .success(let character):
-                self.character = character
+                self.character = character.first
             case .failure(let error):
                 print(error.localizedDescription)
             }

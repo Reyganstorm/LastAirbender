@@ -9,16 +9,16 @@ import UIKit
 
 class RandomCharacterViewController: UIViewController {
     
-    @IBOutlet var photoImage: CharacterImage!
+    @IBOutlet weak var photoImage: CharacterImage!
     @IBOutlet var textLabel: UILabel!
     
-    var character: [Character]!
+    var character: Character!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        description(char: character[0])
-        photoImage.fetchImage(from: character[0].photoUrl)
+        description(char: character)
+        photoImage.fetchImage(from: character.photoUrl)
     }
    
 }

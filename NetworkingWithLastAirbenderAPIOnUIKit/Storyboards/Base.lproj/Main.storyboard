@@ -18,11 +18,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bx3-o1-gQx">
                                 <rect key="frame" x="68.5" y="314.5" width="238.5" height="38"/>
-                                <color key="backgroundColor" red="0.91942626237869263" green="0.869365394115448" blue="0.57472914457321167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Random Character">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                    <color key="baseForegroundColor" red="0.9334673285484314" green="0.40946048498153687" blue="0.16951817274093628" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseForegroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -36,7 +36,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.86974519491195679" green="0.93518328666687012" blue="0.96294242143630981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Bx3-o1-gQx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Ci-S0-XNx"/>
                             <constraint firstItem="Bx3-o1-gQx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mgl-9P-v9g"/>
@@ -161,25 +161,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qYl-wr-d1K" customClass="CharacterImage" customModule="NetworkingWithLastAirbenderAPIOnUIKit" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="113"/>
+                                            <rect key="frame" x="5" y="5" width="50" height="103"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="miD-dW-u47"/>
-                                                <constraint firstAttribute="width" constant="100" id="wxl-GG-ysL"/>
+                                                <constraint firstAttribute="height" constant="50" id="GAB-0j-VKH"/>
+                                                <constraint firstAttribute="width" constant="50" id="wxl-GG-ysL"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgm-fy-Mrw">
-                                            <rect key="frame" x="130" y="46.5" width="209" height="20.5"/>
+                                            <rect key="frame" x="85" y="46.5" width="254" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="qYl-wr-d1K" firstAttribute="top" secondItem="vA2-TR-unC" secondAttribute="top" id="0Lf-v4-Nhg"/>
-                                        <constraint firstAttribute="bottom" secondItem="qYl-wr-d1K" secondAttribute="bottom" id="0sb-WF-18H"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Tgm-fy-Mrw" secondAttribute="trailing" constant="20" id="AVa-9A-1lO"/>
                                         <constraint firstItem="Tgm-fy-Mrw" firstAttribute="centerY" secondItem="vA2-TR-unC" secondAttribute="centerY" id="AiR-3Q-Oef"/>
-                                        <constraint firstItem="qYl-wr-d1K" firstAttribute="leading" secondItem="vA2-TR-unC" secondAttribute="leading" id="Gfm-nQ-1v0"/>
+                                        <constraint firstItem="qYl-wr-d1K" firstAttribute="leading" secondItem="vA2-TR-unC" secondAttribute="leading" constant="5" id="O3f-pc-x2L"/>
+                                        <constraint firstItem="qYl-wr-d1K" firstAttribute="top" secondItem="vA2-TR-unC" secondAttribute="top" constant="5" id="Tgc-0i-yDB"/>
+                                        <constraint firstAttribute="bottom" secondItem="qYl-wr-d1K" secondAttribute="bottom" constant="5" id="aTn-PY-ipF"/>
                                         <constraint firstItem="Tgm-fy-Mrw" firstAttribute="leading" secondItem="qYl-wr-d1K" secondAttribute="trailing" constant="30" id="gTV-Hn-yBN"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -204,6 +204,9 @@
     <resources>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.fill.questionmark" catalog="system" width="128" height="104"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

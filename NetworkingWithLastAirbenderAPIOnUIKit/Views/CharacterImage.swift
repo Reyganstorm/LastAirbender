@@ -14,11 +14,30 @@ class CharacterImage: UIImageView {
             image = UIImage(named: "anonim")
             return}
         
+        // Используем изображение из кеша если оно там есть
+        if let cashedImage = getCache(from: url) {
+            image = cashedImage
+        }
+        
+        // Вызываем картинку и сохраняем в кеш
         ImageManager.shared.fetchImage(from: url) { data, response in
             self.image = UIImage(data: data)
+            self.postCache(with: data, and: response)
         }
     }
-    // Используем изображение из кеша если оно там есть
+   
+    private func postCache(with data: Data, and response: URLResponse) {
+        guard let url = response.url else { return }
+        let request = URLRequest(url: url)
+        let cashedResponse = CachedURLResponse(response: response, data: data)
+        URLCache.shared.storeCachedResponse(cashedResponse, for: request)
+    }
     
-    // Вызываем картинку и сохраняем в кеш
+    private func getCache(from url: URL) -> UIImage? {
+        let request = URLRequest(url: url)
+        if let cachedResponse = URLCache.shared.cachedResponse(for: request) {
+            return UIImage(data: cachedResponse.data)
+        }
+        return nil
+    }
 }
