@@ -124,12 +124,12 @@
             </objects>
             <point key="canvasLocation" x="33.75" y="97.5"/>
         </scene>
-        <!--Legent Of Avatar-->
+        <!--Legend Of Avatar-->
         <scene sceneID="5Ta-G4-Fzi">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ChD-pf-2de" customClass="TabBarViewController" customModule="NetworkingWithLastAirbenderAPIOnUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Legent Of Avatar" id="ajF-Yg-gh3"/>
+                    <navigationItem key="navigationItem" title="Legend Of Avatar" id="ajF-Yg-gh3"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wCZ-V9-E1Z">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
