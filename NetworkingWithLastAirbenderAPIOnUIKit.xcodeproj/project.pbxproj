@@ -93,10 +93,10 @@
 		E8B683C228043DAE00034D75 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8210CA82807164300851ECE /* TabBarViewController.swift */,
 				E8B683B128043D3700034D75 /* MainViewController.swift */,
 				E85724CC2806DBCA00619E8A /* RandomCharacterViewController.swift */,
 				E85724CE28070F0100619E8A /* AvatarsListViewController.swift */,
-				E8210CA82807164300851ECE /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

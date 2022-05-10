@@ -43,6 +43,19 @@ class NetworkManager {
         }.resume()
     }
     
+    func fetchCharacter(from stringUrl: String?) async throws -> [Character] {
+        guard let url = URL(string: stringUrl ?? "") else {
+            throw NetworkError.invalidURL
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        guard let courses = try? JSONDecoder().decode([Character].self, from: data) else {
+            throw NetworkError.noData
+        }
+        
+        return courses
+    }
+    
     private init() {}
 }
 

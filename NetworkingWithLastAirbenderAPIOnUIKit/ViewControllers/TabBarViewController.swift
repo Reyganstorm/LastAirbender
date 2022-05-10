@@ -18,16 +18,12 @@ class TabBarViewController: UITabBarController {
     
     private func loadViewController() {
         guard let avatarVC = self.viewControllers?.last as? AvatarsListViewController else { return }
-        
-        NetworkManager.shared.getCharacter(from: Links.allAvatars.rawValue) { result in
-            switch result {
-            case .success(let character):
-                DispatchQueue.main.async {
-                    self.avatars = character
-                    avatarVC.avatars = self.avatars
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
+        Task {
+            do {
+                avatars = try await NetworkManager.shared.fetchCharacter(from: Links.allAvatars.rawValue)
+                avatarVC.avatars = avatars
+            } catch {
+                print(error)
             }
         }
     }

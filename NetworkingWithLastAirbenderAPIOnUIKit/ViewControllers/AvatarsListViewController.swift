@@ -13,7 +13,6 @@ class AvatarsListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  fetchAvatars()
         tableView.reloadData()
     }
     
