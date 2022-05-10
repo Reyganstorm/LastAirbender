@@ -34,12 +34,12 @@ class MainViewController: UIViewController {
 
 extension MainViewController {
     private func fetchCharacter() {
-        NetworkManager.shared.getCharacter(from: Links.random.rawValue) { result in
-            switch result {
-            case .success(let character):
-                self.character = character.first
-            case .failure(let error):
-                print(error.localizedDescription)
+        Task {
+            do {
+                let characters = try await NetworkManager.shared.fetchCharacter(from: Links.random.rawValue)
+                character = characters.first
+            } catch {
+                print(error)
             }
         }
     }
