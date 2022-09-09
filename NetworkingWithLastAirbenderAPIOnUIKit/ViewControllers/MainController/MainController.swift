@@ -20,7 +20,7 @@ class MainController: UIViewController, Routable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        view.backgroundColor = .orange
+        view.addSubview(baseView)
         baseView.frame = view.bounds
     }
     

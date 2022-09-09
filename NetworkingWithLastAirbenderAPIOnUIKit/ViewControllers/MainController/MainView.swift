@@ -29,7 +29,8 @@ class MainView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+        addViews()
+        addConstraints()
     }
     
     private func addViews() {
