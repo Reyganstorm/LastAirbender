@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol Routable: UIViewController {
-    var router: MainRouter { get set }
+    var router: MainRouter? { get set }
 }
 
 enum RootScreen {
@@ -29,5 +29,19 @@ class MainRouter: NSObject {
         self.navigationController = navigationController
     }
     
+    // MARK: - PUSH ViewController
     
+    func pushMainVC() {
+        let mainVC = MainController()
+//        mainVC.router = self
+        pushViewController(vc: mainVC, animated: true)
+    }
+    
+    
+    // MARK: - Private Func
+    
+    private func pushViewController(vc: Routable, animated: Bool) {
+        vc.router = self
+        navigationController.pushViewController(vc, animated: animated)
+    }
 }

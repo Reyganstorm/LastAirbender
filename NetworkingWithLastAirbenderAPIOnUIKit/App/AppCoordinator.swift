@@ -16,7 +16,7 @@ class AppCoordinator: NSObject {
     init(window: UIWindow?) {
         self.window = window!
         super.init()
-        
+        startScreenFlow()
     }
     
     func didFinishLaunchingWithOptions(_ aplication: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? ) {
@@ -26,7 +26,7 @@ class AppCoordinator: NSObject {
     private func startScreenFlow() {
         let navController = UINavigationController()
         router = MainRouter(navigationController: navController)
-//        router.push
+        router?.pushMainVC()
         self.window.rootViewController = navController
         self.window.makeKeyAndVisible()
     }
