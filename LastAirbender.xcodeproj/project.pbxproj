@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8031C0A28CCA293004103EF /* QwitcherGrypen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8031C0828CCA293004103EF /* QwitcherGrypen-Regular.ttf */; };
+		E8031C0B28CCA293004103EF /* QwitcherGrypen-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8031C0928CCA293004103EF /* QwitcherGrypen-Bold.ttf */; };
 		E8210CA92807164300851ECE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8210CA82807164300851ECE /* TabBarViewController.swift */; };
 		E85724CD2806DBCA00619E8A /* RandomCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724CC2806DBCA00619E8A /* RandomCharacterViewController.swift */; };
 		E85724CF28070F0100619E8A /* AvatarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724CE28070F0100619E8A /* AvatarsListViewController.swift */; };
@@ -15,6 +17,7 @@
 		E892D7A228CB4D6F003E88CF /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E892D7A128CB4D6F003E88CF /* MainRouter.swift */; };
 		E8B3553728CB86770089E7CC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3553628CB86770089E7CC /* MainController.swift */; };
 		E8B3553928CB86D80089E7CC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3553828CB86D80089E7CC /* MainView.swift */; };
+		E8B3553C28CC8E480089E7CC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3553B28CC8E480089E7CC /* BaseVC.swift */; };
 		E8B683AE28043D3700034D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683AD28043D3700034D75 /* AppDelegate.swift */; };
 		E8B683B028043D3700034D75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683AF28043D3700034D75 /* SceneDelegate.swift */; };
 		E8B683B228043D3700034D75 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683B128043D3700034D75 /* MainViewController.swift */; };
@@ -24,6 +27,9 @@
 		E8B683C728043F5000034D75 /* RandomCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683C628043F5000034D75 /* RandomCharacter.swift */; };
 		E8B683CC2804621500034D75 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B683CB2804621500034D75 /* NetworkManager.swift */; };
 		E8C49EE1281891DB0017AC94 /* CharacterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C49EE0281891DB0017AC94 /* CharacterImage.swift */; };
+		E8CB20B728CCE2A400141A3D /* SideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CB20B628CCE2A400141A3D /* SideVC.swift */; };
+		E8CB20BA28CCE3A500141A3D /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CB20B928CCE3A500141A3D /* RootScreen.swift */; };
+		E8CB20BC28CCE9BB00141A3D /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CB20BB28CCE9BB00141A3D /* MenuTableViewCell.swift */; };
 		FBEC3F4C7DF5F55DC3C0C4A3 /* Pods_LastAirbender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E768613CC357935CD95326E9 /* Pods_LastAirbender.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +37,8 @@
 		45001341C4DCA4F2757A3544 /* Pods-LastAirbender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastAirbender.debug.xcconfig"; path = "Target Support Files/Pods-LastAirbender/Pods-LastAirbender.debug.xcconfig"; sourceTree = "<group>"; };
 		52D100710A4CD01505CB5C63 /* Pods-LastAirbender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastAirbender.release.xcconfig"; path = "Target Support Files/Pods-LastAirbender/Pods-LastAirbender.release.xcconfig"; sourceTree = "<group>"; };
 		E768613CC357935CD95326E9 /* Pods_LastAirbender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LastAirbender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8031C0828CCA293004103EF /* QwitcherGrypen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QwitcherGrypen-Regular.ttf"; sourceTree = "<group>"; };
+		E8031C0928CCA293004103EF /* QwitcherGrypen-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QwitcherGrypen-Bold.ttf"; sourceTree = "<group>"; };
 		E8210CA82807164300851ECE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E85724CC2806DBCA00619E8A /* RandomCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCharacterViewController.swift; sourceTree = "<group>"; };
 		E85724CE28070F0100619E8A /* AvatarsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AvatarsListViewController.swift; path = NetworkingWithLastAirbenderAPIOnUIKit/ViewControllers/AvatarsListViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -39,6 +47,7 @@
 		E892D7A128CB4D6F003E88CF /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		E8B3553628CB86770089E7CC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		E8B3553828CB86D80089E7CC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E8B3553B28CC8E480089E7CC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		E8B683AA28043D3700034D75 /* LastAirbender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LastAirbender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B683AD28043D3700034D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B683AF28043D3700034D75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +59,9 @@
 		E8B683C628043F5000034D75 /* RandomCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCharacter.swift; sourceTree = "<group>"; };
 		E8B683CB2804621500034D75 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E8C49EE0281891DB0017AC94 /* CharacterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImage.swift; sourceTree = "<group>"; };
+		E8CB20B628CCE2A400141A3D /* SideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideVC.swift; sourceTree = "<group>"; };
+		E8CB20B928CCE3A500141A3D /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
+		E8CB20BB28CCE9BB00141A3D /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E8031C0728CCA21C004103EF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E8031C0928CCA293004103EF /* QwitcherGrypen-Bold.ttf */,
+				E8031C0828CCA293004103EF /* QwitcherGrypen-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E8B3553528CB85C30089E7CC /* MainController */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +109,16 @@
 				E8B3553828CB86D80089E7CC /* MainView.swift */,
 			);
 			path = MainController;
+			sourceTree = "<group>";
+		};
+		E8B3553A28CC8E280089E7CC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E8B3553B28CC8E480089E7CC /* BaseVC.swift */,
+				E8CB20B628CCE2A400141A3D /* SideVC.swift */,
+				E8CB20BB28CCE9BB00141A3D /* MenuTableViewCell.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		E8B683A128043D3700034D75 = {
@@ -111,6 +142,8 @@
 		E8B683AC28043D3700034D75 /* NetworkingWithLastAirbenderAPIOnUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E8CB20B828CCE39500141A3D /* Utils */,
+				E8031C0728CCA21C004103EF /* Fonts */,
 				E8B683C228043DAE00034D75 /* ViewControllers */,
 				E8B683C328043E2800034D75 /* Models */,
 				E8C49EE2281891E20017AC94 /* Views */,
@@ -134,6 +167,7 @@
 		E8B683C228043DAE00034D75 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8B3553A28CC8E280089E7CC /* Base */,
 				E8B3553528CB85C30089E7CC /* MainController */,
 				E8210CA82807164300851ECE /* TabBarViewController.swift */,
 				E8B683B128043D3700034D75 /* MainViewController.swift */,
@@ -186,6 +220,14 @@
 				E8C49EE0281891DB0017AC94 /* CharacterImage.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E8CB20B828CCE39500141A3D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E8CB20B928CCE3A500141A3D /* RootScreen.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8B683BA28043D3800034D75 /* LaunchScreen.storyboard in Resources */,
+				E8031C0A28CCA293004103EF /* QwitcherGrypen-Regular.ttf in Resources */,
 				E8B683B728043D3800034D75 /* Assets.xcassets in Resources */,
 				E8B683B528043D3700034D75 /* Main.storyboard in Resources */,
+				E8031C0B28CCA293004103EF /* QwitcherGrypen-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,13 +351,17 @@
 				E8B3553928CB86D80089E7CC /* MainView.swift in Sources */,
 				E8B683CC2804621500034D75 /* NetworkManager.swift in Sources */,
 				E85724D1280711EA00619E8A /* AvatarViewCell.swift in Sources */,
+				E8B3553C28CC8E480089E7CC /* BaseVC.swift in Sources */,
+				E8CB20B728CCE2A400141A3D /* SideVC.swift in Sources */,
 				E8B683B228043D3700034D75 /* MainViewController.swift in Sources */,
 				E8C49EE1281891DB0017AC94 /* CharacterImage.swift in Sources */,
 				E892D7A228CB4D6F003E88CF /* MainRouter.swift in Sources */,
 				E85724CD2806DBCA00619E8A /* RandomCharacterViewController.swift in Sources */,
 				E8210CA92807164300851ECE /* TabBarViewController.swift in Sources */,
 				E8B683AE28043D3700034D75 /* AppDelegate.swift in Sources */,
+				E8CB20BA28CCE3A500141A3D /* RootScreen.swift in Sources */,
 				E85724CF28070F0100619E8A /* AvatarsListViewController.swift in Sources */,
+				E8CB20BC28CCE9BB00141A3D /* MenuTableViewCell.swift in Sources */,
 				E8B683C728043F5000034D75 /* RandomCharacter.swift in Sources */,
 				E8B3553728CB86770089E7CC /* MainController.swift in Sources */,
 				E8B683B028043D3700034D75 /* SceneDelegate.swift in Sources */,

@@ -8,8 +8,7 @@
 import Foundation
 import UIKit
 
-class MainController: UIViewController, Routable {
-    var router: MainRouter?
+class MainController: BaseVC {
     
     var baseView: MainView = MainView()
     
