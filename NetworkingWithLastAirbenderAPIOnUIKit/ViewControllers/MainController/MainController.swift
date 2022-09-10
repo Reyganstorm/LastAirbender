@@ -13,16 +13,34 @@ class MainController: UIViewController, Routable {
     
     var baseView: MainView = MainView()
     
+    private let frontView: UIView = {
+       let view = UIView()
+        view.backgroundColor = .yellow
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .lightGray
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        view.addSubview(baseView)
-        baseView.frame = view.bounds
+        setupFrontView()
     }
     
     
+    private func setupFrontView() {
+        view.addSubview(frontView)
+        frontView.addSubview(baseView)
+        
+        frontView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(100)
+            make.left.right.bottom.equalToSuperview()
+        }
+        
+        baseView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
 }
