@@ -34,7 +34,37 @@ class MainRouter: NSObject {
     func pushMainVC() {
         let mainVC = MainController()
 //        mainVC.router = self
-        pushViewController(vc: mainVC, animated: true)
+        pushViewController(vc: mainVC, animated: false)
+    }
+    
+    func pushWithActionAccountVC() {
+        let vc = AccountController()
+        pushViewController(vc: vc, animated: true)
+    }
+    
+    func pushWithoutActionAccountVC() {
+        let vc = AccountController()
+        pushViewController(vc: vc, animated: true)
+    }
+    
+    func pushAllCharactersVC() {
+        let vc = CharactersController()
+        pushViewController(vc: vc, animated: false)
+    }
+    
+    func pushTestVC() {
+        let vc = TestController()
+        pushViewController(vc: vc, animated: false)
+    }
+    
+    func pushAllAvatars() {
+        let vc = AllAvatarsController()
+        pushViewController(vc: vc, animated: false)
+    }
+    
+    func pushRandomCharacters() {
+        let vc = RandomCharactersController()
+        pushViewController(vc: vc, animated: false)
     }
     
     

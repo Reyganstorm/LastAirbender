@@ -1,13 +1,14 @@
 //
-//  RandomCharacter.swift
-//  NetworkingWithLastAirbenderAPIOnUIKit
+//  Character.swift
+//  LastAirbender
 //
-//  Created by Руслан Штыбаев on 11.04.2022.
+//  Created by Руслан Штыбаев on 11.09.2022.
 //
 
 import Foundation
 
-struct Character: Decodable {
+struct Character: Codable {
+    let _id: String?
     
     let allies: [String]?
     let enemies: [String]?
@@ -23,4 +24,5 @@ struct Character: Decodable {
     let profession: String?
     let position: String?
     let affiliation: String?
+
 }

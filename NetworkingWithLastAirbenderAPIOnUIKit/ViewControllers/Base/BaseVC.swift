@@ -7,6 +7,7 @@
 
 import UIKit
 import SideMenu
+import MBProgressHUD
 
 class BaseVC: UIViewController, Routable {
     
@@ -18,6 +19,7 @@ class BaseVC: UIViewController, Routable {
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "mainBack")
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
@@ -82,6 +84,8 @@ class BaseVC: UIViewController, Routable {
     
     @objc func personalAccountDidTap() {
         print("personalAccountDidTap")
+        dismiss(animated: true)
+        router?.pushWithActionAccountVC()
     }
     
 }
@@ -114,6 +118,19 @@ extension BaseVC: SideMenuNavigationControllerDelegate {
     
     func sideMenuWillDisappear(menu: SideMenuNavigationController, animated: Bool) {
         blurBackgroundOff()
+    }
+    
+    func showLoadingIndicator() {
+        DispatchQueue.main.async {
+            let hud = MBProgressHUD.showAdded(to: self.navigationController?.view ?? self.view, animated: true)
+            hud.bezelView.color = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+        }
+    }
+    
+    func dismissLoadingIndicator() {
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.navigationController?.view ?? self.view, animated: true)
+        }
     }
 }
 

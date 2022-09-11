@@ -15,6 +15,7 @@ class SideVC: UIViewController, Routable {
     var cellMenuItemArray = [
     NSLocalizedString("Main", comment: ""),
     NSLocalizedString("Account", comment: ""),
+    NSLocalizedString("Characters", comment: ""),
     NSLocalizedString("What are u character?", comment: ""),
     NSLocalizedString("All Avatars", comment: ""),
     NSLocalizedString("Random Character", comment: ""),
@@ -80,6 +81,32 @@ extension SideVC: UITableViewDataSource, UITableViewDelegate {
         let titleName = cellMenuItemArray[indexPath.row]
         cell.cellSideMenuConfigure(name: titleName)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            dismiss(animated: true)
+            router?.pushMainVC()
+        case 1:
+            dismiss(animated: true)
+            router?.pushWithoutActionAccountVC()
+        case 2:
+            dismiss(animated: true)
+            router?.pushAllCharactersVC()
+        case 3:
+            dismiss(animated: true)
+            router?.pushTestVC()
+        case 4:
+            dismiss(animated: true)
+            router?.pushAllAvatars()
+        case 5:
+            dismiss(animated: true)
+            router?.pushRandomCharacters()
+            
+        default:
+            print("another tap")
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
